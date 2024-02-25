@@ -168,6 +168,7 @@ function addToFavorites(superhero) {
 // Search Characters on Enter Keypress
 document.getElementById('search-input').addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
+    page = 0;
     const searchQuery = document.getElementById('search-input').value.trim();
     getSuperheroes(searchQuery);
   }
@@ -182,6 +183,7 @@ document.getElementById('search-input').addEventListener('change', () => {
 
 // Search Characters on Button Click
 document.getElementById('search-button').addEventListener('click', () => {
+  page = 0;
   const searchQuery = document.getElementById('search-input').value.trim();
   getSuperheroes(searchQuery);
 });
