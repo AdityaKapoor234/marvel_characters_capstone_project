@@ -50,8 +50,6 @@ function addToFavorites(superhero) {
     favorites.push(superhero);
   }
   superhero.favourite = !superhero.favourite;
-  // Calling Function to Fetch Information from Favourite Character List
-  getFavouriteSuperheroes();
   if (favorites.length > 0) {
     // Add Character To Favourites
     localStorage.setItem('favorites', JSON.stringify(favorites));
@@ -59,6 +57,8 @@ function addToFavorites(superhero) {
     // Remove Favourite List
     localStorage.removeItem('favorites');
   }
+  // Calling Function to Fetch Information from Favourite Character List
+  getFavouriteSuperheroes();
 }
 
 // Calling Function to Fetch Information from Favourite Character List
